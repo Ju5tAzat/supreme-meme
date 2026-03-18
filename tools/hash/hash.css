@@ -1,0 +1,82 @@
+/* Hash Generator Styles */
+
+.hash-app {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hash-app textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-family: monospace;
+    font-size: 0.9rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.algorithms {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.algo-btn {
+    flex: 1;
+    padding: 0.75rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.algo-btn:hover {
+    border-color: var(--accent);
+}
+
+.algo-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+.output {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+}
+
+.output-header span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+.output-header button {
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 0.25rem 0.5rem;
+}
+
+.output textarea {
+    border: none;
+    border-radius: 0;
+    min-height: 100px;
+    margin: 0;
+}

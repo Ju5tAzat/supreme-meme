@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Таймер</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="pomodoro.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>🍅 Pomodoro Таймер</h1>
+            <p>Метод помидора для повышения продуктивности</p>
+        </div>
+
+        <div class="pomodoro-app">
+            <!-- Timer Display -->
+            <div class="timer-display">
+                <div class="timer-circle">
+                    <svg viewBox="0 0 100 100">
+                        <circle class="timer-bg" cx="50" cy="50" r="45"/>
+                        <circle class="timer-progress" cx="50" cy="50" r="45" id="progressCircle"/>
+                    </svg>
+                    <div class="timer-time">
+                        <span id="minutes">25</span>
+                        <span class="timer-separator">:</span>
+                        <span id="seconds">00</span>
+                    </div>
+                    <div class="timer-mode" id="timerMode">Фокус</div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="timer-controls">
+                <button id="startBtn" class="control-btn primary">Старт</button>
+                <button id="pauseBtn" class="control-btn" style="display: none;">Пауза</button>
+                <button id="resetBtn" class="control-btn secondary">Сброс</button>
+                <button id="skipBtn" class="control-btn secondary">Пропустить</button>
+            </div>
+
+            <!-- Session Info -->
+            <div class="session-info">
+                <div class="session-item">
+                    <span class="session-icon">🍅</span>
+                    <span>Сеансы: </span>
+                    <span id="sessionCount">0</span>
+                    <span>/ 4</span>
+                </div>
+                <div class="session-item">
+                    <span class="session-icon">⏱️</span>
+                    <span>Общее время: </span>
+                    <span id="totalTime">0:00</span>
+                </div>
+            </div>
+
+            <!-- Settings -->
+            <div class="timer-settings">
+                <h3>Настройки</h3>
+                <div class="settings-grid">
+                    <div class="setting-item">
+                        <label>Фокус (мин)</label>
+                        <input type="number" id="focusTime" value="25" min="1" max="60">
+                    </div>
+                    <div class="setting-item">
+                        <label>Короткий перерыв (мин)</label>
+                        <input type="number" id="shortBreak" value="5" min="1" max="30">
+                    </div>
+                    <div class="setting-item">
+                        <label>Длинный перерыв (мин)</label>
+                        <input type="number" id="longBreak" value="15" min="1" max="60">
+                    </div>
+                    <div class="setting-item">
+                        <label>Звук</label>
+                        <label class="switch">
+                            <input type="checkbox" id="soundEnabled" checked>
+                            <span class="slider"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tasks -->
+            <div class="pomodoro-tasks">
+                <h3>Задачи</h3>
+                <div class="task-input">
+                    <input type="text" id="taskInput" placeholder="Добавить задачу...">
+                    <button id="addTaskBtn">+</button>
+                </div>
+                <ul id="taskList" class="task-list"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="pomodoro.js"></script>
+</body>
+</html>

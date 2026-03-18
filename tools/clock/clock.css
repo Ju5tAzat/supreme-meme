@@ -1,0 +1,167 @@
+/* Стили часов */
+.clock-app {
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Цифровые часы */
+.digital-clock {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.time-display {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: var(--accent);
+    letter-spacing: 4px;
+}
+
+.time-display span {
+    display: inline-block;
+}
+
+.colon {
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+.am-pm {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    font-weight: 500;
+}
+
+/* Аналоговые часы */
+.analog-clock {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.analog-clock svg {
+    width: 200px;
+    height: 200px;
+}
+
+.clock-face {
+    fill: var(--bg-secondary);
+    stroke: var(--border);
+    stroke-width: 2;
+}
+
+.hour-mark {
+    stroke: var(--text-secondary);
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.hour-hand {
+    stroke: var(--text-primary);
+    stroke-width: 6;
+    stroke-linecap: round;
+}
+
+.minute-hand {
+    stroke: var(--text-primary);
+    stroke-width: 4;
+    stroke-linecap: round;
+}
+
+.second-hand {
+    stroke: var(--danger);
+    stroke-width: 2;
+    stroke-linecap: round;
+}
+
+.center-dot {
+    fill: var(--accent);
+}
+
+/* Дата */
+.date-display {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.date-full {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.date-relative {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* Мировые часы */
+.world-clocks {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.world-clocks h3 {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.world-clock-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.world-clock {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+}
+
+.world-clock .city {
+    color: var(--text-secondary);
+}
+
+.world-clock .world-time {
+    color: var(--accent);
+    font-weight: 600;
+    font-family: 'Courier New', monospace;
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .time-display {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    
+    .analog-clock svg {
+        width: 160px;
+        height: 160px;
+    }
+    
+    .date-full {
+        font-size: 1.2rem;
+    }
+}

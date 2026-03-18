@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер валют - Инструменты для жизни</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="currency.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <div class="tool-icon">💰</div>
+            <h1>Конвертер валют</h1>
+            <p>Конвертируйте валюты по актуальным курсам</p>
+        </div>
+
+        <div class="currency-app">
+            <div class="currency-input">
+                <input type="number" id="amount" value="1" min="0" step="0.01">
+                <select id="fromCurrency">
+                    <option value="USD">USD - Доллар США</option>
+                    <option value="EUR">EUR - Евро</option>
+                    <option value="RUB">RUB - Российский рубль</option>
+                    <option value="KZT">KZT - Казахстанский тенге</option>
+                    <option value="GBP">GBP - Британский фунт</option>
+                    <option value="JPY">JPY - Японская иена</option>
+                    <option value="CNY">CNY - Китайский юань</option>
+                    <option value="TRY">TRY - Турецкая лира</option>
+                    <option value="UAH">UAH - Украинская гривна</option>
+                    <option value="BYN">BYN - Белорусский рубль</option>
+                </select>
+            </div>
+
+            <button class="swap-btn" id="swapBtn">⇄</button>
+
+            <div class="currency-input">
+                <input type="number" id="result" readonly>
+                <select id="toCurrency">
+                    <option value="RUB" selected>RUB - Российский рубль</option>
+                    <option value="USD">USD - Доллар США</option>
+                    <option value="EUR">EUR - Евро</option>
+                    <option value="KZT">KZT - Казахстанский тенге</option>
+                    <option value="GBP">GBP - Британский фунт</option>
+                    <option value="JPY">JPY - Японская иена</option>
+                    <option value="CNY">CNY - Китайский юань</option>
+                    <option value="TRY">TRY - Турецкая лира</option>
+                    <option value="UAH">UAH - Украинская гривна</option>
+                    <option value="BYN">BYN - Белорусский рубль</option>
+                </select>
+            </div>
+
+            <div class="rate-info" id="rateInfo">
+                <span>Курс обмена: 1 USD = 92.50 RUB</span>
+            </div>
+
+            <div class="currency-grid" id="currencyGrid">
+                <!-- Quick conversion cards will be generated here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="currency.js"></script>
+</body>
+</html>

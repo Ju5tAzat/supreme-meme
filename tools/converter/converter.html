@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер единиц</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="converter.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-btn">← На главную</a>
+    
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1>🔄 Конвертер единиц</h1>
+            <p>Длина, вес, температура</p>
+        </div>
+        
+        <div class="converter-app">
+            <!-- Выбор категории -->
+            <div class="category-tabs">
+                <button class="category-btn active" data-category="length">📏 Длина</button>
+                <button class="category-btn" data-category="weight">⚖️ Вес</button>
+                <button class="category-btn" data-category="temperature">🌡️ Температура</button>
+            </div>
+            
+            <!-- Конвертер длины -->
+            <div id="length" class="converter-panel">
+                <div class="converter-input">
+                    <input type="number" id="lengthInput" placeholder="Введите значение">
+                    <select id="lengthFrom">
+                        <option value="meter">Метр (м)</option>
+                        <option value="kilometer">Километр (км)</option>
+                        <option value="centimeter">Сантиметр (см)</option>
+                        <option value="millimeter">Миллиметр (мм)</option>
+                        <option value="mile">Миля (миля)</option>
+                        <option value="yard">Ярд (ярд)</option>
+                        <option value="foot">Фут (фут)</option>
+                        <option value="inch">Дюйм (дюйм)</option>
+                    </select>
+                </div>
+                
+                <div class="swap-btn" onclick="swapUnits('length')">⇅</div>
+                
+                <div class="converter-input">
+                    <input type="text" id="lengthOutput" readonly placeholder="Результат">
+                    <select id="lengthTo">
+                        <option value="kilometer">Километр (км)</option>
+                        <option value="meter" selected>Метр (м)</option>
+                        <option value="centimeter">Сантиметр (см)</option>
+                        <option value="millimeter">Миллиметр (мм)</option>
+                        <option value="mile">Миля (миля)</option>
+                        <option value="yard">Ярд (ярд)</option>
+                        <option value="foot">Фут (фут)</option>
+                        <option value="inch">Дюйм (дюйм)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Конвертер веса -->
+            <div id="weight" class="converter-panel" style="display: none;">
+                <div class="converter-input">
+                    <input type="number" id="weightInput" placeholder="Введите значение">
+                    <select id="weightFrom">
+                        <option value="kilogram">Килограмм (кг)</option>
+                        <option value="gram">Грамм (г)</option>
+                        <option value="milligram">Миллиграмм (мг)</option>
+                        <option value="pound">Фунт (фунт)</option>
+                        <option value="ounce">Унция (унция)</option>
+                        <option value="ton">Тонна (т)</option>
+                    </select>
+                </div>
+                
+                <div class="swap-btn" onclick="swapUnits('weight')">⇅</div>
+                
+                <div class="converter-input">
+                    <input type="text" id="weightOutput" readonly placeholder="Результат">
+                    <select id="weightTo">
+                        <option value="kilogram" selected>Килограмм (кг)</option>
+                        <option value="gram">Грамм (г)</option>
+                        <option value="milligram">Миллиграмм (мг)</option>
+                        <option value="pound">Фунт (фунт)</option>
+                        <option value="ounce">Унция (унция)</option>
+                        <option value="ton">Тонна (т)</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Конвертер температуры -->
+            <div id="temperature" class="converter-panel" style="display: none;">
+                <div class="converter-input">
+                    <input type="number" id="tempInput" placeholder="Введите значение">
+                    <select id="tempFrom">
+                        <option value="celsius">Цельсий (°C)</option>
+                        <option value="fahrenheit">Фаренгейт (°F)</option>
+                        <option value="kelvin">Кельвин (K)</option>
+                    </select>
+                </div>
+                
+                <div class="swap-btn" onclick="swapUnits('temperature')">⇅</div>
+                
+                <div class="converter-input">
+                    <input type="text" id="tempOutput" readonly placeholder="Результат">
+                    <select id="tempTo">
+                        <option value="fahrenheit">Фаренгейт (°F)</option>
+                        <option value="celsius" selected>Цельсий (°C)</option>
+                        <option value="kelvin">Кельвин (K)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="converter.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* Color Palette Generator Styles */
+
+.palette-app {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.base-color {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.base-color label {
+    display: block;
+    margin-bottom: 1rem;
+    color: var(--text-secondary);
+}
+
+.color-input-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.color-input-wrapper input[type="color"] {
+    width: 80px;
+    height: 50px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.color-input-wrapper input[type="text"] {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-family: monospace;
+    text-transform: uppercase;
+}
+
+.palette-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.palette-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1rem;
+}
+
+.palette-row {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.color-swatch {
+    flex: 1;
+    min-width: 80px;
+    height: 100px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0.75rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+    position: relative;
+}
+
+.color-swatch:hover {
+    transform: scale(1.05);
+    z-index: 1;
+}
+
+.color-swatch .color-code {
+    font-family: monospace;
+    font-size: 0.75rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 0.25rem;
+    border-radius: 4px;
+    color: white;
+}
+
+.random-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 12px;
+    color: var(--bg-primary);
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: filter 0.2s;
+}
+
+.random-btn:hover {
+    filter: brightness(1.1);
+}
+
+.export-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.export-section h3 {
+    margin-bottom: 1rem;
+}
+
+.export-options {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.btn-secondary {
+    flex: 1;
+    min-width: 120px;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-primary);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+    border-color: var(--accent);
+}

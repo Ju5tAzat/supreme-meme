@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Трекер привычек</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="habit.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>🎯 Трекер привычек</h1>
+            <p>Отслеживайте свои привычки</p>
+        </div>
+
+        <div class="habit-app">
+            <div class="add-habit">
+                <input type="text" id="habitInput" placeholder="Новая привычка...">
+                <button id="addBtn">+</button>
+            </div>
+
+            <div class="stats">
+                <div class="stat">
+                    <span id="totalHabits">0</span>
+                    <small>Всего</small>
+                </div>
+                <div class="stat">
+                    <span id="completedToday">0</span>
+                    <small>Сегодня</small>
+                </div>
+                <div class="stat">
+                    <span id="streak">0</span>
+                    <small>Серия</small>
+                </div>
+            </div>
+
+            <div class="weekdays-row">
+                <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+            </div>
+
+            <ul id="habitsList" class="habits-list"></ul>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="habit.js"></script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Календарь</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="calendar.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>📅 Календарь</h1>
+            <p>Планируйте события</p>
+        </div>
+
+        <div class="calendar-app">
+            <div class="calendar-header">
+                <button id="prevMonth">←</button>
+                <h2 id="monthYear">Январь 2026</h2>
+                <button id="nextMonth">→</button>
+            </div>
+
+            <div class="calendar-grid">
+                <div class="weekdays">
+                    <span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Вс</span>
+                </div>
+                <div id="days" class="days"></div>
+            </div>
+
+            <div class="events-section">
+                <h3>События</h3>
+                <div class="add-event">
+                    <input type="date" id="eventDate">
+                    <input type="text" id="eventText" placeholder="Событие">
+                    <button id="addEventBtn">+</button>
+                </div>
+                <ul id="eventsList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="calendar.js"></script>
+</body>
+</html>

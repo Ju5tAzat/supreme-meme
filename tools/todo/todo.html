@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do список</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="todo.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-btn">← На главную</a>
+    
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1>✅ To-Do список</h1>
+            <p>Планируйте свои задачи</p>
+        </div>
+        
+        <div class="todo-app">
+            <div class="todo-input-area">
+                <input type="text" id="todoInput" placeholder="Добавьте новую задачу...">
+                <button id="addTodoBtn">Добавить</button>
+            </div>
+            
+            <div class="todo-stats">
+                <span>Всего: <strong id="totalCount">0</strong></span>
+                <span>Выполнено: <strong id="completedCount">0</strong></span>
+            </div>
+            
+            <ul id="todoList" class="todo-list">
+                <!-- Задачи будут добавлены здесь -->
+            </ul>
+            
+            <div class="todo-actions">
+                <button id="exportTodos" class="btn-secondary" title="Экспорт">📤 Экспорт</button>
+                <button id="importTodos" class="btn-secondary" title="Импорт">📥 Импорт</button>
+                <input type="file" id="importTodosFile" accept=".json" style="display:none;">
+                <button id="clearCompleted" class="btn-secondary">Очистить выполненные</button>
+                <button id="clearAll" class="btn-danger">Очистить все</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="todo.js"></script>
+</body>
+</html>

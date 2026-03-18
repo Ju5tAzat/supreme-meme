@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Текстовые инструменты</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="texttools.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>📏 Текстовые инструменты</h1>
+            <p>Счетчик символов, слов и строк</p>
+        </div>
+
+        <div class="text-tools-app">
+            <div class="input-area">
+                <textarea id="textInput" placeholder="Введите или вставьте текст здесь..."></textarea>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">📝</div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="charCount">0</span>
+                        <span class="stat-label">Символов</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">📋</div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="wordCount">0</span>
+                        <span class="stat-label">Слов</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">↩️</div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="lineCount">0</span>
+                        <span class="stat-label">Строк</span>
+                    </div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">⏱️</div>
+                    <div class="stat-info">
+                        <span class="stat-value" id="readTime">0</span>
+                        <span class="stat-label">мин чтения</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions-row">
+                <button id="copyBtn" class="action-btn">📋 Копировать</button>
+                <button id="clearBtn" class="action-btn secondary">🗑️ Очистить</button>
+                <button id="pasteBtn" class="action-btn secondary">📥 Вставить</button>
+            </div>
+
+            <div class="text-tools-section">
+                <h3>Инструменты</h3>
+                <div class="tools-grid">
+                    <button class="tool-btn" id="removeSpaces">
+                        <span class="tool-icon">✂️</span>
+                        <span>Удалить лишние пробелы</span>
+                    </button>
+                    <button class="tool-btn" id="trimLines">
+                        <span class="tool-icon">📏</span>
+                        <span>Обрезать пробелы в строках</span>
+                    </button>
+                    <button class="tool-btn" id="sortLines">
+                        <span class="tool-icon">🔢</span>
+                        <span>Сортировать строки</span>
+                    </button>
+                    <button class="tool-btn" id="reverseLines">
+                        <span class="tool-icon">🔄</span>
+                        <span>Перевернуть строки</span>
+                    </button>
+                    <button class="tool-btn" id="removeDuplicates">
+                        <span class="tool-icon">🗑️</span>
+                        <span>Удалить дубликаты</span>
+                    </button>
+                    <button class="tool-btn" id="addNumbers">
+                        <span class="tool-icon">#️⃣</span>
+                        <span>Добавить нумерацию</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="texttools.js"></script>
+</body>
+</html>

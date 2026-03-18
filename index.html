@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Инструменты для жизни - Ваш персональный Toolbox</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <canvas id="animated-bg" class="animated-bg"></canvas>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <span class="logo-icon">🛠️</span>
+                <h1>Инструменты для жизни</h1>
+            </div>
+            <p class="subtitle">Ваш персональный набор инструментов для продуктивности</p>
+        </div>
+        
+        <!-- Search Bar -->
+        <div class="search-container">
+            <div class="search-box">
+                <span class="search-icon">🔍</span>
+                <input type="text" id="globalSearch" placeholder="Поиск инструментов..." autocomplete="off">
+                <kbd>Ctrl+K</kbd>
+            </div>
+            <div id="searchResults" class="search-results"></div>
+        </div>
+    </header>
+
+    <!-- Quick Access Section -->
+    <section class="quick-access">
+        <div class="quick-section" id="favoritesSection" style="display: none;">
+            <h3>⭐ Избранное</h3>
+            <div class="quick-grid" id="favoritesGrid"></div>
+        </div>
+        
+        <div class="quick-section" id="recentSection" style="display: none;">
+            <h3>🕐 Недавно использованные</h3>
+            <div class="quick-grid" id="recentGrid"></div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Category Tabs -->
+        <nav class="category-tabs">
+            <button class="category-tab active" data-category="all">Все</button>
+            <button class="category-tab" data-category="productivity">📊 Продуктивность</button>
+            <button class="category-tab" data-category="text">📝 Текст</button>
+            <button class="category-tab" data-category="converters">🔄 Конвертеры</button>
+            <button class="category-tab" data-category="developer">💻 Разработка</button>
+            <button class="category-tab" data-category="security">🔐 Безопасность</button>
+            <button class="category-tab" data-category="media">🖼️ Медиа</button>
+            <button class="category-tab" data-category="utilities">⚡ Утилиты</button>
+        </nav>
+
+        <!-- Tools Grid -->
+        <div class="tools-grid" id="toolsGrid">
+            <!-- Продуктивность -->
+            <a href="tools/calculator/calculator.html" class="tool-card" data-category="productivity" data-name="калькулятор計算機computer">
+                <div class="tool-icon">🔢</div>
+                <h2>Калькулятор</h2>
+                <p>Вычисления любой сложности</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/timer/timer.html" class="tool-card" data-category="productivity" data-name="таймер секундомер стоп таймерtimer stopwatch">
+                <div class="tool-icon">⏱️</div>
+                <h2>Таймер и секундомер</h2>
+                <p>Отслеживайте время</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/pomodoro/pomodoro.html" class="tool-card" data-category="productivity" data-name="помодоро таймер фокус работа pomodoro focus">
+                <div class="tool-icon">🍅</div>
+                <h2>Pomodoro таймер</h2>
+                <p>Метод помидора для продуктивности</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/calendar/calendar.html" class="tool-card" data-category="productivity" data-name="календарь события дата calendar event">
+                <div class="tool-icon">📅</div>
+                <h2>Календарь</h2>
+                <p>Планируйте события</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/habit/habit.html" class="tool-card" data-category="productivity" data-name="привычки трекер tracking habits">
+                <div class="tool-icon">🎯</div>
+                <h2>Трекер привычек</h2>
+                <p>Отслеживайте привычки</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/planner/planner.html" class="tool-card" data-category="productivity" data-name="планировщик день план day planner">
+                <div class="tool-icon">📋</div>
+                <h2>Планировщик дня</h2>
+                <p>Планируйте свой день</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/alarm/alarm.html" class="tool-card" data-category="productivity" data-name="будильник wake alarm">
+                <div class="tool-icon">⏰</div>
+                <h2>Будильник</h2>
+                <p>Установите будильник</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <!-- Текст -->
+            <a href="tools/todo/todo.html" class="tool-card" data-category="productivity" data-name="todo список задачи notes">
+                <div class="tool-icon">✅</div>
+                <h2>To-Do список</h2>
+                <p>Планируйте свои задачи</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/notes/notes.html" class="tool-card" data-category="text" data-name="заметки текст notes">
+                <div class="tool-icon">📝</div>
+                <h2>Заметки</h2>
+                <p>Записывайте важные мысли</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/texttools/texttools.html" class="tool-card" data-category="text" data-name="текст символы слова счетчик counter">
+                <div class="tool-icon">📏</div>
+                <h2>Текстовые инструменты</h2>
+                <p>Счетчик символов и слов</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/caseconverter/caseconverter.html" class="tool-card" data-category="text" data-name="регистр upper lower конвертер case">
+                <div class="tool-icon">Aa</div>
+                <h2>Конвертер регистра</h2>
+                <p>Измените регистр текста</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/markdown/markdown.html" class="tool-card" data-category="text" data-name="markdown разметка preview">
+                <div class="tool-icon">📄</div>
+                <h2>Markdown Preview</h2>
+                <p>Предпросмотр Markdown</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <!-- Конвертеры -->
+            <a href="tools/converter/converter.html" class="tool-card" data-category="converters" data-name="конвертер единиц длина вес температура converter">
+                <div class="tool-icon">🔄</div>
+                <h2>Конвертер единиц</h2>
+                <p>Длина, вес, температура</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/currency/currency.html" class="tool-card" data-category="converters" data-name="валюта доллар евро рубли курс currency">
+                <div class="tool-icon">💰</div>
+                <h2>Конвертер валют</h2>
+                <p>Курсы валют</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <!-- Разработка -->
+            <a href="tools/jsonformatter/jsonformatter.html" class="tool-card" data-category="developer" data-name="json форматирование prettier developer">
+                <div class="tool-icon">{ }</div>
+                <h2>JSON Formatter</h2>
+                <p>Форматирование JSON</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/base64/base64.html" class="tool-card" data-category="developer" data-name="base64 encode decode">
+                <div class="tool-icon">🔤</div>
+                <h2>Base64</h2>
+                <p>Кодирование/декодирование</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/urlencode/urlencode.html" class="tool-card" data-category="developer" data-name="url encode decode">
+                <div class="tool-icon">🔗</div>
+                <h2>URL Encoder</h2>
+                <p>Кодирование URL</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/uuid/uuid.html" class="tool-card" data-category="developer" data-name="uuid генератор id">
+                <div class="tool-icon">🆔</div>
+                <h2>UUID Generator</h2>
+                <p>Генератор UUID</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/colorpicker/colorpicker.html" class="tool-card" data-category="developer" data-name="цвет picker hex rgb">
+                <div class="tool-icon">🎨</div>
+                <h2>Color Picker</h2>
+                <p>Выбор цвета</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/gradient/gradient.html" class="tool-card" data-category="developer" data-name="градиент css gradient">
+                <div class="tool-icon">🌈</div>
+                <h2>CSS Gradient</h2>
+                <p>Генератор градиентов</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <!-- Безопасность -->
+            <a href="tools/password/password.html" class="tool-card" data-category="security" data-name="пароль генератор password generator">
+                <div class="tool-icon">🔐</div>
+                <h2>Генератор паролей</h2>
+                <p>Создайте надёжный пароль</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/passwordstrength/passwordstrength.html" class="tool-card" data-category="security" data-name="пароль сила проверка password strength">
+                <div class="tool-icon">🔒</div>
+                <h2>Проверка пароля</h2>
+                <p>Проверьте надёжность</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/hash/hash.html" class="tool-card" data-category="security" data-name="hash md5 sha генератор">
+                <div class="tool-icon">#</div>
+                <h2>Hash Generator</h2>
+                <p>Генератор хешей</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <!-- Медиа -->
+            <a href="tools/qrcode/qrcode.html" class="tool-card" data-category="media" data-name="qr код генератор qrcode">
+                <div class="tool-icon">📱</div>
+                <h2>QR Code</h2>
+                <p>Создавайте QR-коды</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/qrreader/qrreader.html" class="tool-card" data-category="media" data-name="qr сканер reader">
+                <div class="tool-icon">📷</div>
+                <h2>QR Scanner</h2>
+                <p>Сканируйте QR-коды</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/colorpalette/colorpalette.html" class="tool-card" data-category="media" data-name="палитра цветов palette">
+                <div class="tool-icon">🎭</div>
+                <h2>Color Palette</h2>
+                <p>Генератор палитры</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <!-- Утилиты -->
+            <a href="tools/clock/clock.html" class="tool-card" data-category="utilities" data-name="часы время clock time">
+                <div class="tool-icon">🕐</div>
+                <h2>Часы</h2>
+                <p>Текущее время и дата</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/search/search.html" class="tool-card" data-category="utilities" data-name="поиск google">
+                <div class="tool-icon">🔍</div>
+                <h2>Быстрый поиск</h2>
+                <p>Мгновенный поиск в Google</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/bmi/bmi.html" class="tool-card" data-category="utilities" data-name="bmi индекс массы тела калькулятор">
+                <div class="tool-icon">⚖️</div>
+                <h2>Калькулятор BMI</h2>
+                <p>Индекс массы тела</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/randomnumber/randomnumber.html" class="tool-card" data-category="utilities" data-name="случайное число рандом random">
+                <div class="tool-icon">🎲</div>
+                <h2>Рандом</h2>
+                <p>Генератор случайных чисел</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/clipboard/clipboard.html" class="tool-card" data-category="utilities" data-name="буфер обмена заметки clipboard">
+                <div class="tool-icon">📋</div>
+                <h2>Буфер обмена</h2>
+                <p>Заметки в буфере</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+
+            <a href="tools/ideas/ideas.html" class="tool-card" data-category="utilities" data-name="идеи генератор random ideas">
+                <div class="tool-icon">💡</div>
+                <h2>Генератор идей</h2>
+                <p>Случайные идеи</p>
+                <button class="favorite-btn" title="В избранное">⭐</button>
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2026 Инструменты для жизни | <span id="toolsCount">0</span> инструментов</p>
+        <div class="footer-links">
+            <button id="settingsBtn">⚙️ Настройки</button>
+        </div>
+    </footer>
+
+    <!-- Settings Modal -->
+    <div id="settingsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>⚙️ Настройки</h2>
+                <button class="modal-close">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="setting-group">
+                    <label>Тема</label>
+                    <div class="theme-toggle">
+                        <button class="theme-btn active" data-theme="dark">🌙 Тёмная</button>
+                        <button class="theme-btn" data-theme="light">☀️ Светлая</button>
+                    </div>
+                </div>
+                
+                <div class="setting-group">
+                    <label>Акцентный цвет</label>
+                    <div class="color-options">
+                        <button class="color-btn active" data-color="#58a6ff" style="background: #58a6ff"></button>
+                        <button class="color-btn" data-color="#3fb950" style="background: #3fb950"></button>
+                        <button class="color-btn" data-color="#d29922" style="background: #d29922"></button>
+                        <button class="color-btn" data-color="#f85149" style="background: #f85149"></button>
+                        <button class="color-btn" data-color="#a371f7" style="background: #a371f7"></button>
+                        <button class="color-btn" data-color="#f778ba" style="background: #f778ba"></button>
+                    </div>
+                </div>
+                
+                <div class="setting-group">
+                    <label>Анимация частиц</label>
+                    <label class="switch">
+                        <input type="checkbox" id="particlesToggle" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="setting-group">
+                    <button id="resetFavorites" class="btn-secondary">Сбросить избранное</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/home.js"></script>
+</body>
+</html>

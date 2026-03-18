@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Scanner - Инструменты для жизни</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="qrreader.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <div class="tool-icon">📷</div>
+            <h1>QR Scanner</h1>
+            <p>Сканируйте QR-коды с помощью камеры</p>
+        </div>
+
+        <div class="qrreader-app">
+            <div class="scanner-container">
+                <video id="video" autoplay playsinline></video>
+                <canvas id="canvas" hidden></canvas>
+                <div class="scanner-overlay">
+                    <div class="scanner-frame">
+                        <div class="corner top-left"></div>
+                        <div class="corner top-right"></div>
+                        <div class="corner bottom-left"></div>
+                        <div class="corner bottom-right"></div>
+                        <div class="scan-line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn-primary" id="startBtn">📷 Начать сканирование</button>
+                <button class="btn-secondary" id="stopBtn" disabled>⏹ Остановить</button>
+                <label class="upload-btn">
+                    📁 Загрузить изображение
+                    <input type="file" id="fileInput" accept="image/*" hidden>
+                </label>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h3>Результат:</h3>
+                <div class="result-content">
+                    <p id="resultText"></p>
+                    <div class="result-actions">
+                        <button class="btn-secondary" id="copyBtn">📋 Копировать</button>
+                        <button class="btn-secondary" id="openBtn">🌐 Открыть</button>
+                        <button class="btn-secondary" id="newTabBtn">📑 Открыть в новой вкладке</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="history-section" id="historySection">
+                <h3>История сканирований</h3>
+                <div class="history-list" id="historyList">
+                    <p class="empty-history">История пуста</p>
+                </div>
+                <button class="btn-secondary" id="clearHistory">Очистить историю</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="qrreader.js"></script>
+</body>
+</html>

@@ -1,0 +1,148 @@
+/* UUID Generator Styles */
+
+.uuid-app {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.uuid-display {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+}
+
+.uuid-display input {
+    flex: 1;
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-family: 'Courier New', monospace;
+    font-size: 1.1rem;
+}
+
+.copy-btn {
+    width: 50px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    font-size: 1.25rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.copy-btn:hover {
+    border-color: var(--accent);
+    background: var(--bg-secondary);
+}
+
+.controls {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.primary-btn {
+    flex: 1;
+    padding: 1rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 12px;
+    color: var(--bg-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(88, 166, 255, 0.3);
+}
+
+.secondary-btn {
+    padding: 1rem 1.5rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent);
+}
+
+.history-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.history-section h3 {
+    margin: 0 0 1rem;
+    font-size: 1.1rem;
+}
+
+.uuid-history {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    max-height: 250px;
+    overflow-y: auto;
+}
+
+.uuid-history li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.uuid-history li:hover {
+    background: var(--border);
+}
+
+.history-item-text {
+    color: var(--text-primary);
+    word-break: break-all;
+}
+
+.history-item-copy {
+    background: transparent;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.6;
+    padding: 0.25rem;
+}
+
+.history-item-copy:hover {
+    opacity: 1;
+}
+
+.clear-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background: var(--danger);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.clear-btn:hover {
+    background: #d73a49;
+}

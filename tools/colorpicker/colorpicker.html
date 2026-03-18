@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="colorpicker.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>🎨 Color Picker</h1>
+            <p>Выберите цвет и получите его в разных форматах</p>
+        </div>
+
+        <div class="colorpicker-app">
+            <div class="color-preview" id="colorPreview"></div>
+            
+            <div class="picker-section">
+                <input type="color" id="colorInput" value="#58a6ff">
+                <input type="range" id="hueSlider" min="0" max="360" value="210">
+            </div>
+
+            <div class="formats-grid">
+                <div class="format-card">
+                    <label>HEX</label>
+                    <div class="format-value">
+                        <input type="text" id="hexValue" value="#58a6ff" readonly>
+                        <button class="copy-btn" data-target="hexValue">📋</button>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <label>RGB</label>
+                    <div class="format-value">
+                        <input type="text" id="rgbValue" value="rgb(88, 166, 255)" readonly>
+                        <button class="copy-btn" data-target="rgbValue">📋</button>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <label>HSL</label>
+                    <div class="format-value">
+                        <input type="text" id="hslValue" value="hsl(210, 100%, 67%)" readonly>
+                        <button class="copy-btn" data-target="hslValue">📋</button>
+                    </div>
+                </div>
+                
+                <div class="format-card">
+                    <label>HSV/HSB</label>
+                    <div class="format-value">
+                        <input type="text" id="hsvValue" value="hsv(210, 65%, 100%)" readonly>
+                        <button class="copy-btn" data-target="hsvValue">📋</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="palette-section">
+                <h3>Недавно использованные</h3>
+                <div id="recentColors" class="recent-colors"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="colorpicker.js"></script>
+</body>
+</html>

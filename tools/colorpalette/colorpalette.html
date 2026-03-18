@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Palette Generator - Инструменты для жизни</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="colorpalette.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <div class="tool-icon">🎭</div>
+            <h1>Color Palette Generator</h1>
+            <p>Создавайте цветовые палитры</p>
+        </div>
+
+        <div class="palette-app">
+            <div class="base-color">
+                <label>Базовый цвет</label>
+                <div class="color-input-wrapper">
+                    <input type="color" id="baseColor" value="#6366f1">
+                    <input type="text" id="baseColorText" value="#6366f1">
+                </div>
+            </div>
+
+            <div class="palette-section">
+                <h3>Монохромная палитра</h3>
+                <div class="palette-row" id="monoPalette"></div>
+            </div>
+
+            <div class="palette-section">
+                <h3>Комплементарная палитра</h3>
+                <div class="palette-row" id="compPalette"></div>
+            </div>
+
+            <div class="palette-section">
+                <h3>Триадная палитра</h3>
+                <div class="palette-row" id="triadPalette"></div>
+            </div>
+
+            <div class="palette-section">
+                <h3>Аналоговая палитра</h3>
+                <div class="palette-row" id="analogPalette"></div>
+            </div>
+
+            <div class="palette-section">
+                <h3>Случайная палитра</h3>
+                <button class="random-btn" id="randomBtn">🎲 Сгенерировать случайную палитру</button>
+                <div class="palette-row" id="randomPalette"></div>
+            </div>
+
+            <div class="export-section">
+                <h3>Экспорт</h3>
+                <div class="export-options">
+                    <button class="btn-secondary" id="exportCSS">📋 CSS Variables</button>
+                    <button class="btn-secondary" id="exportJSON">📋 JSON</button>
+                    <button class="btn-secondary" id="exportSCSS">📋 SCSS</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="colorpalette.js"></script>
+</body>
+</html>

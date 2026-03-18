@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hash Generator</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="hash.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1># Hash Generator</h1>
+            <p>Генератор хешей</p>
+        </div>
+
+        <div class="hash-app">
+            <textarea id="inputText" placeholder="Введите текст..."></textarea>
+            
+            <div class="algorithms">
+                <button class="algo-btn" data-algo="md5">MD5</button>
+                <button class="algo-btn" data-algo="sha1">SHA-1</button>
+                <button class="algo-btn" data-algo="sha256">SHA-256</button>
+                <button class="algo-btn active" data-algo="sha512">SHA-512</button>
+            </div>
+
+            <div class="output">
+                <div class="output-header">
+                    <span id="algoName">SHA-512</span>
+                    <button id="copyBtn">📋</button>
+                </div>
+                <textarea id="outputText" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="../../js/main.js"></script>
+    <script src="hash.js"></script>
+</body>
+</html>

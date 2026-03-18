@@ -1,0 +1,128 @@
+/* JSON Formatter Styles */
+
+.json-app {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.input-section, .output-section {
+    margin-bottom: 1rem;
+}
+
+textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.actions button {
+    padding: 0.75rem 1.25rem;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: none;
+}
+
+.actions button.primary {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+.actions button.primary:hover {
+    transform: translateY(-2px);
+}
+
+.actions button.secondary {
+    background: var(--bg-card);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+.actions button.secondary:hover {
+    border-color: var(--accent);
+}
+
+.actions button.danger {
+    background: var(--danger);
+    color: white;
+}
+
+.output-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.output-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+}
+
+.output-header span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.output-header button {
+    padding: 0.4rem 0.75rem;
+    background: transparent;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.output-header button:hover {
+    border-color: var(--accent);
+}
+
+pre {
+    margin: 0;
+    padding: 1rem;
+    font-family: 'Consolas', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-word;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+/* JSON Syntax Highlighting */
+pre .key { color: #9cdcfe; }
+pre .string { color: #ce9178; }
+pre .number { color: #b5cea8; }
+pre .boolean { color: #569cd6; }
+pre .null { color: #569cd6; }
+pre .punctuation { color: #d4d4d4; }
+
+pre.error {
+    color: var(--danger);
+}

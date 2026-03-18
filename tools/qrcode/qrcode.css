@@ -1,0 +1,236 @@
+/* QR Code Generator Styles */
+
+.qr-generator {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+}
+
+.input-group {
+    margin-bottom: 1.5rem;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.input-group textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.options-row {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.option-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.option-group label {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.option-group select {
+    padding: 8px 12px;
+}
+
+.option-group input[type="color"] {
+    width: 100%;
+    height: 40px;
+    padding: 4px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.button-group button {
+    flex: 1;
+    min-width: 140px;
+}
+
+.button-group button.secondary {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    border: 1px solid var(--border);
+}
+
+.button-group button.secondary:hover {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg-primary);
+}
+
+.qr-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.qr-result canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.qr-result .placeholder {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+.qr-result.has-qr .placeholder {
+    display: none;
+}
+
+/* Notification Toast */
+.notification-toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 1rem 1.5rem;
+    background: var(--success);
+    color: white;
+    border-radius: 8px;
+    font-weight: 500;
+    transform: translateY(100px);
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.notification-toast.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.notification-toast.error {
+    background: var(--danger);
+}
+
+/* History Section */
+.history-section {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.history-section h3 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.history-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 1rem;
+}
+
+.history-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.75rem 1rem;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.history-item:hover {
+    background: var(--accent);
+    color: var(--bg-primary);
+}
+
+.history-item-text {
+    flex: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 0.9rem;
+}
+
+.history-item-delete {
+    padding: 4px 8px;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.2rem;
+    line-height: 1;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+}
+
+.history-item-delete:hover {
+    opacity: 1;
+    color: var(--danger);
+}
+
+.history-item:hover .history-item-delete {
+    color: var(--bg-primary);
+}
+
+.clear-btn {
+    width: 100%;
+    background: var(--danger);
+    color: white;
+    padding: 10px;
+    font-size: 0.9rem;
+}
+
+.clear-btn:hover {
+    background: #d73a49;
+}
+
+/* Empty state */
+.history-empty {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 2rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .qr-generator {
+        padding: 1.5rem;
+    }
+    
+    .options-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .button-group button {
+        width: 100%;
+    }
+}

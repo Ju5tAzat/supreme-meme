@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заметки</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="notes.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-btn">← На главную</a>
+    
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1>📝 Заметки</h1>
+            <p>Записывайте важные мысли</p>
+        </div>
+        
+        <div class="notes-app">
+            <div class="notes-input">
+                <input type="text" id="noteTitle" placeholder="Заголовок заметки">
+                <textarea id="noteContent" placeholder="Текст заметки..."></textarea>
+                <button id="saveNoteBtn">Сохранить заметку</button>
+            </div>
+            
+            <div class="notes-search">
+                <input type="text" id="searchNotes" placeholder="Поиск заметок...">
+            </div>
+            
+            <div class="notes-actions">
+                <button id="exportNotes" class="action-btn" title="Экспорт">📤</button>
+                <button id="importNotes" class="action-btn" title="Импорт">📥</button>
+                <input type="file" id="importNotesFile" accept=".json" style="display:none;">
+            </div>
+            
+            <div id="notesList" class="notes-list">
+                <!-- Заметки будут отображаться здесь -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="notes.js"></script>
+</body>
+</html>

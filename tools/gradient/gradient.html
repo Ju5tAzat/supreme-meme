@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Gradient Generator - Инструменты для жизни</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="gradient.css">
+</head>
+<body>
+    <div class="container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <div class="tool-icon">🌈</div>
+            <h1>CSS Gradient Generator</h1>
+            <p>Создавайте красивые CSS градиенты</p>
+        </div>
+
+        <div class="gradient-app">
+            <div class="preview" id="gradientPreview"></div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label>Тип градиента</label>
+                    <div class="gradient-type">
+                        <button class="type-btn active" data-type="linear">Линейный</button>
+                        <button class="type-btn" data-type="radial">Радиальный</button>
+                    </div>
+                </div>
+
+                <div class="control-group">
+                    <label>Направление (угол)</label>
+                    <input type="range" id="angle" min="0" max="360" value="90">
+                    <span id="angleValue">90°</span>
+                </div>
+
+                <div class="colors-list" id="colorsList">
+                    <div class="color-row">
+                        <input type="color" class="color-input" value="#ff6b6b">
+                        <input type="number" class="position-input" value="0" min="0" max="100">
+                        <span>%</span>
+                        <button class="remove-color" disabled>×</button>
+                    </div>
+                    <div class="color-row">
+                        <input type="color" class="color-input" value="#4ecdc4">
+                        <input type="number" class="position-input" value="100" min="0" max="100">
+                        <span>%</span>
+                        <button class="remove-color" disabled>×</button>
+                    </div>
+                </div>
+
+                <button class="add-color-btn" id="addColorBtn">+ Добавить цвет</button>
+
+                <div class="control-group">
+                    <label>Предпросмотр формы</label>
+                    <div class="shape-preview">
+                        <div class="shape linear" id="shapeLinear"></div>
+                        <div class="shape radial" id="shapeRadial"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="output-section">
+                <h3>CSS код</h3>
+                <div class="code-output">
+                    <code id="cssCode">background: linear-gradient(90deg, #ff6b6b 0%, #4ecdc4 100%);</code>
+                    <button class="copy-btn" id="copyBtn">Скопировать</button>
+                </div>
+            </div>
+
+            <div class="presets">
+                <h3>Популярные градиенты</h3>
+                <div class="presets-grid">
+                    <div class="preset" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%)" data-gradient="linear-gradient(135deg, #667eea 0%, #764ba2 100%)"></div>
+                    <div class="preset" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%)" data-gradient="linear-gradient(135deg, #f093fb 0%, #f5576c 100%)"></div>
+                    <div class="preset" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)" data-gradient="linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)"></div>
+                    <div class="preset" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)" data-gradient="linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)"></div>
+                    <div class="preset" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%)" data-gradient="linear-gradient(135deg, #fa709a 0%, #fee140 100%)"></div>
+                    <div class="preset" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)" data-gradient="linear-gradient(135deg, #a8edea 0%, #fed6e3 100%)"></div>
+                    <div class="preset" style="background: linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)" data-gradient="linear-gradient(135deg, #d299c2 0%, #fef9d7 100%)"></div>
+                    <div class="preset" style="background: linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)" data-gradient="linear-gradient(135deg, #89f7fe 0%, #66a6ff 100%)"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="gradient.js"></script>
+</body>
+</html>

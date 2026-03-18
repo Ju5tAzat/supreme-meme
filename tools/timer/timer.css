@@ -1,0 +1,239 @@
+/* Стили таймера и секундомера */
+.mode-switch {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.mode-btn {
+    padding: 0.75rem 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mode-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--bg-primary);
+    font-weight: 600;
+}
+
+.mode-btn:hover:not(.active) {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+/* Таймер */
+.timer-panel,
+.stopwatch-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.timer-display,
+.stopwatch-display {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.time-unit {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.time-unit input {
+    width: 70px;
+    height: 70px;
+    background: var(--bg-primary);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1.75rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.time-unit input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.time-unit label {
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+}
+
+.separator {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--text-secondary);
+    margin: 0 0.25rem;
+    align-self: flex-start;
+    padding-top: 15px;
+}
+
+/* Секундомер */
+.stopwatch-display span {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: 'Courier New', monospace;
+    color: var(--accent);
+    letter-spacing: 4px;
+}
+
+/* Управление */
+.timer-controls,
+.stopwatch-controls {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.timer-controls button,
+.stopwatch-controls button {
+    min-width: 100px;
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.btn-start {
+    background: var(--success);
+    border: none;
+    color: white;
+}
+
+.btn-start:hover {
+    background: #4ade80;
+    transform: translateY(-2px);
+}
+
+.btn-pause {
+    background: var(--warning);
+    border: none;
+    color: var(--bg-primary);
+}
+
+.btn-pause:hover {
+    background: #fbbf24;
+    transform: translateY(-2px);
+}
+
+.btn-reset {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+}
+
+.btn-reset:hover {
+    background: var(--danger);
+    border-color: var(--danger);
+    color: white;
+}
+
+.btn-lap {
+    background: var(--accent);
+    border: none;
+    color: var(--bg-primary);
+}
+
+.btn-lap:hover {
+    background: var(--accent-hover);
+    transform: translateY(-2px);
+}
+
+/* Круги */
+.stopwatch-laps {
+    max-height: 200px;
+    overflow-y: auto;
+    margin-bottom: 1.5rem;
+}
+
+.stopwatch-laps h3 {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    text-transform: uppercase;
+}
+
+.stopwatch-laps ul {
+    list-style: none;
+}
+
+.stopwatch-laps li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    font-family: 'Courier New', monospace;
+}
+
+.lap-number {
+    color: var(--text-secondary);
+}
+
+.lap-time {
+    color: var(--accent);
+    font-weight: bold;
+}
+
+/* Оповещение */
+.timer-alert {
+    text-align: center;
+    padding: 1rem;
+    background: var(--success);
+    border-radius: 8px;
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+/* Адаптивность */
+@media (max-width: 480px) {
+    .time-unit input {
+        width: 55px;
+        height: 55px;
+        font-size: 1.25rem;
+    }
+    
+    .separator {
+        font-size: 1.75rem;
+        padding-top: 10px;
+    }
+    
+    .stopwatch-display span {
+        font-size: 2.5rem;
+    }
+    
+    .timer-controls button,
+    .stopwatch-controls button {
+        min-width: 80px;
+        padding: 0.75rem 1rem;
+    }
+}

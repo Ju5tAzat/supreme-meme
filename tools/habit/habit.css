@@ -1,0 +1,147 @@
+/* Habit Tracker Styles */
+
+.habit-app {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.add-habit {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.add-habit input {
+    flex: 1;
+    padding: 0.875rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 1rem;
+}
+
+.add-habit input:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.add-habit button {
+    width: 50px;
+    background: var(--accent);
+    border: none;
+    border-radius: 10px;
+    color: var(--bg-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-habit button:hover {
+    transform: scale(1.05);
+}
+
+.stats {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.stat {
+    flex: 1;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+}
+
+.stat span {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+.stat small {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.weekdays-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+    margin-bottom: 0.75rem;
+    text-align: center;
+}
+
+.weekdays-row span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    padding: 0.5rem;
+}
+
+.habits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.habit-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+}
+
+.habit-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.habit-name {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.habit-delete {
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+.habit-delete:hover {
+    color: var(--danger);
+}
+
+.habit-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 4px;
+}
+
+.habit-day {
+    aspect-ratio: 1;
+    background: var(--bg-secondary);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.habit-day:hover {
+    background: var(--border);
+}
+
+.habit-day.completed {
+    background: var(--success);
+}
+
+.habit-day.today {
+    border: 2px solid var(--accent);
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Быстрый поиск</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="search.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-btn">← На главную</a>
+    
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1>🔍 Быстрый поиск</h1>
+            <p>Мгновенный поиск в Google</p>
+        </div>
+        
+        <div class="search-app">
+            <!-- Поисковая строка -->
+            <div class="search-box">
+                <div class="search-input-wrapper">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" id="searchInput" placeholder="Что вы хотите найти?">
+                </div>
+                <button id="searchBtn">Найти</button>
+            </div>
+            
+            <!-- Быстрые ссылки -->
+            <div class="quick-links">
+                <h3>Быстрые ссылки</h3>
+                <div class="links-grid">
+                    <a href="https://www.google.com" target="_blank" class="quick-link">
+                        <span class="link-icon">🌐</span>
+                        <span>Google</span>
+                    </a>
+                    <a href="https://www.youtube.com" target="_blank" class="quick-link">
+                        <span class="link-icon">📺</span>
+                        <span>YouTube</span>
+                    </a>
+                    <a href="https://www.wikipedia.org" target="_blank" class="quick-link">
+                        <span class="link-icon">📚</span>
+                        <span>Wikipedia</span>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="quick-link">
+                        <span class="link-icon">💻</span>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" class="quick-link">
+                        <span class="link-icon">🐦</span>
+                        <span>Twitter</span>
+                    </a>
+                    <a href="https://vk.com" target="_blank" class="quick-link">
+                        <span class="link-icon">💬</span>
+                        <span>VK</span>
+                    </a>
+                    <a href="https://ru.stackoverflow.com" target="_blank" class="quick-link">
+                        <span class="link-icon">❓</span>
+                        <span>Stack Overflow</span>
+                    </a>
+                    <a href="https://www.ozon.ru" target="_blank" class="quick-link">
+                        <span class="link-icon">🛒</span>
+                        <span>Ozon</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- История поиска -->
+            <div class="search-history">
+                <div class="history-header">
+                    <h3>История поиска</h3>
+                    <button id="clearHistory" class="btn-clear">Очистить</button>
+                </div>
+                <ul id="historyList" class="history-list">
+                    <!-- История будет добавлена здесь -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    
+    <script src="search.js"></script>
+</body>
+</html>

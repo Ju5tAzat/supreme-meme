@@ -1,0 +1,100 @@
+/* Clipboard Notes Styles */
+
+.clipboard-app {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.add-note {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.add-note textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 1rem;
+    resize: vertical;
+    margin-bottom: 1rem;
+}
+
+.add-note textarea:focus {
+    outline: none;
+    border-color: var(--accent);
+}
+
+.add-note button {
+    width: 100%;
+    padding: 0.875rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 10px;
+    color: var(--bg-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.add-note button:hover {
+    transform: translateY(-2px);
+}
+
+.notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.clip-note {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+    position: relative;
+}
+
+.clip-note p {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.clip-note-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 0.75rem;
+}
+
+.clip-note-actions button {
+    flex: 1;
+    padding: 0.5rem;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.clip-note-actions button:hover {
+    border-color: var(--accent);
+    color: var(--text-primary);
+}
+
+.clip-note-actions button.delete:hover {
+    border-color: var(--danger);
+    color: var(--danger);
+}

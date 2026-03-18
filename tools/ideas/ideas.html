@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор идей</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="ideas.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>💡 Генератор идей</h1>
+            <p>Нужна идея? Мы поможем!</p>
+        </div>
+
+        <div class="ideas-app">
+            <div class="category-select">
+                <select id="categorySelect">
+                    <option value="all">Все категории</option>
+                    <option value="project">Проекты</option>
+                    <option value="content">Контент</option>
+                    <option value="business">Бизнес</option>
+                    <option value="learning">Обучение</option>
+                    <option value="fun">Развлечения</option>
+                </select>
+            </div>
+
+            <div class="idea-display">
+                <p id="ideaText">Нажмите кнопку для получения идеи</p>
+            </div>
+
+            <button id="generateBtn" class="generate-btn">🎲 Получить идею</button>
+
+            <div class="favorites">
+                <h3>Избранные идеи</h3>
+                <ul id="favoritesList"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="ideas.js"></script>
+</body>
+</html>

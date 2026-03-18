@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Планировщик дня</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="planner.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>📋 Планировщик дня</h1>
+            <p>Планируйте свой день</p>
+        </div>
+
+        <div class="planner-app">
+            <div class="date-display">
+                <h2 id="currentDate"></h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item add-item">
+                    <input type="time" id="newTime">
+                    <input type="text" id="newTask" placeholder="Добавить задачу...">
+                    <button id="addBtn">+</button>
+                </div>
+                <div id="tasksList"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="planner.js"></script>
+</body>
+</html>

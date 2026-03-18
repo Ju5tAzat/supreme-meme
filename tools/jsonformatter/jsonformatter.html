@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Formatter</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="jsonformatter.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>{ } JSON Formatter</h1>
+            <p>Форматируйте и валидируйте JSON</p>
+        </div>
+
+        <div class="json-app">
+            <div class="input-section">
+                <textarea id="jsonInput" placeholder='{"key": "value"}'></textarea>
+            </div>
+            
+            <div class="actions">
+                <button id="formatBtn" class="primary">Форматировать</button>
+                <button id="minifyBtn" class="secondary">Минифицировать</button>
+                <button id="validateBtn" class="secondary">Проверить</button>
+                <button id="clearBtn" class="danger">Очистить</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">
+                    <span>Результат</span>
+                    <button id="copyBtn">📋 Копировать</button>
+                </div>
+                <pre id="jsonOutput"></pre>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="jsonformatter.js"></script>
+</body>
+</html>

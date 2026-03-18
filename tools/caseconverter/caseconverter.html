@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Конвертер регистра</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="caseconverter.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>Aa Конвертер регистра</h1>
+            <p>Измените регистр текста</p>
+        </div>
+
+        <div class="case-app">
+            <textarea id="inputText" placeholder="Введите текст..."></textarea>
+
+            <div class="buttons-grid">
+                <button class="case-btn" data-case="upper">ВЕРХНИЙ РЕГИСТР</button>
+                <button class="case-btn" data-case="lower">нижний регистр</button>
+                <button class="case-btn" data-case="title">Заглавные Первые Буквы</button>
+                <button class="case-btn" data-case="sentence">Предложения с заглавной.</button>
+                <button class="case-btn" data-case="toggle">иЗМЕНЯТЬ рЕГИСТР</button>
+                <button class="case-btn" data-case="inverse">ИнВЕРТИРОВАТЬ</button>
+            </div>
+
+            <div class="output-section">
+                <div class="output-header">
+                    <span>Результат</span>
+                    <button id="copyBtn">📋 Копировать</button>
+                </div>
+                <textarea id="outputText" readonly></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="caseconverter.js"></script>
+</body>
+</html>

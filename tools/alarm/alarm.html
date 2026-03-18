@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Будильник</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="alarm.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>⏰ Будильник</h1>
+            <p>Установите будильник</p>
+        </div>
+
+        <div class="alarm-app">
+            <div class="clock-display">
+                <span id="currentTime">00:00:00</span>
+            </div>
+
+            <div class="alarm-set">
+                <input type="time" id="alarmTime">
+                <button id="setAlarmBtn">Установить</button>
+            </div>
+
+            <div id="alarmList" class="alarms-list"></div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="alarm.js"></script>
+</body>
+</html>

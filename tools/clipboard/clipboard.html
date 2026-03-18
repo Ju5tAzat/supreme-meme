@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Буфер обмена</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="clipboard.css">
+</head>
+<body>
+    <div class="tool-container">
+        <a href="../../index.html" class="back-btn">← На главную</a>
+        
+        <div class="tool-header">
+            <h1>📋 Буфер обмена</h1>
+            <p>Заметки в буфере обмена</p>
+        </div>
+
+        <div class="clipboard-app">
+            <div class="add-note">
+                <textarea id="noteInput" placeholder="Введите заметку..."></textarea>
+                <button id="saveBtn">Сохранить</button>
+            </div>
+
+            <div class="notes-grid" id="notesGrid"></div>
+        </div>
+    </div>
+
+    <script src="../../js/main.js"></script>
+    <script src="clipboard.js"></script>
+</body>
+</html>

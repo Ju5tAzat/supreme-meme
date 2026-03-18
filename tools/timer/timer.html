@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таймер и секундомер</title>
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="timer.css">
+</head>
+<body>
+    <a href="../../index.html" class="back-btn">← На главную</a>
+    
+    <div class="tool-container">
+        <div class="tool-header">
+            <h1>⏱️ Таймер и секундомер</h1>
+            <p>Отслеживайте время</p>
+        </div>
+        
+        <!-- Переключатель режимов -->
+        <div class="mode-switch">
+            <button id="timerMode" class="mode-btn active">Таймер</button>
+            <button id="stopwatchMode" class="mode-btn">Секундомер</button>
+        </div>
+        
+        <!-- Режим таймера -->
+        <div id="timerPanel" class="timer-panel">
+            <div class="timer-display">
+                <div class="time-unit">
+                    <input type="number" id="hours" min="0" max="99" value="0" placeholder="00">
+                    <label>часы</label>
+                </div>
+                <span class="separator">:</span>
+                <div class="time-unit">
+                    <input type="number" id="minutes" min="0" max="59" value="5" placeholder="00">
+                    <label>минуты</label>
+                </div>
+                <span class="separator">:</span>
+                <div class="time-unit">
+                    <input type="number" id="seconds" min="0" max="59" value="0" placeholder="00">
+                    <label>секунды</label>
+                </div>
+            </div>
+            
+            <div class="timer-controls">
+                <button id="startTimer" class="btn-start">Старт</button>
+                <button id="pauseTimer" class="btn-pause" style="display: none;">Пауза</button>
+                <button id="resetTimer" class="btn-reset">Сброс</button>
+            </div>
+            
+            <div id="timerAlert" class="timer-alert" style="display: none;">
+                ⏰ Время вышло!
+            </div>
+        </div>
+        
+        <!-- Режим секундомера -->
+        <div id="stopwatchPanel" class="stopwatch-panel" style="display: none;">
+            <div class="stopwatch-display">
+                <span id="stopwatchTime">00:00:00</span>
+            </div>
+            
+            <div class="stopwatch-laps">
+                <h3>Круги</h3>
+                <ul id="lapsList"></ul>
+            </div>
+            
+            <div class="stopwatch-controls">
+                <button id="startStopwatch" class="btn-start">Старт</button>
+                <button id="pauseStopwatch" class="btn-pause" style="display: none;">Стоп</button>
+                <button id="lapStopwatch" class="btn-lap">Круг</button>
+                <button id="resetStopwatch" class="btn-reset">Сброс</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="timer.js"></script>
+</body>
+</html>

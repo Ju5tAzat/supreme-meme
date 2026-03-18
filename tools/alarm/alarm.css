@@ -1,0 +1,81 @@
+/* Alarm Styles */
+
+.alarm-app {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.clock-display {
+    font-size: 4rem;
+    font-weight: 700;
+    font-family: monospace;
+    margin-bottom: 2rem;
+    color: var(--text-primary);
+}
+
+.alarm-set {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.alarm-set input {
+    padding: 1rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text-primary);
+    font-size: 1.2rem;
+}
+
+.alarm-set button {
+    padding: 1rem 2rem;
+    background: var(--accent);
+    border: none;
+    border-radius: 12px;
+    color: var(--bg-primary);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.alarms-list {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1rem;
+}
+
+.alarm-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.alarm-item.active {
+    border: 2px solid var(--success);
+}
+
+.alarm-time {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--accent);
+}
+
+.alarm-actions button {
+    background: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.alarm-actions button:hover {
+    opacity: 1;
+}
